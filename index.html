@@ -1,142 +1,212 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zain Mustafa Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <nav>
-      <h1 class="logo">Portfolio</h1>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="resume.pdf" target="_blank">Resume</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zain Mustafa Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1 class="logo">Portfolio</h1>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
 
-  <main>
-    <!-- Landing Section -->
-    <section id="home" class="landing">
-      <h2>Welcome to My Portfolio</h2>
-      <p>I’m Zain Mustafa, an electrical engineering student passionate about innovation in hardware and embedded systems.</p>
-    </section>
+          <li><a href="resume.pdf" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- About Me Section -->
-    <section id="about" class="about">
-      <h2>I'm Zain Mustafa</h2>
-      <p>
-        As an electrical engineering student in UC Davis, I have taken a course load which has led me to develop a strong basis in the theoretical and practical aspects of engineering.
-        In my time as the electrical lead for the First Nations Launch Rocketry Team I have been able to apply this knowledge by designing and implementing systems which utilize microcontrollers to collect and store data from multiple sensors on a rocket.
-        This role honed my programming and data analysis skills which will help me with the demands of this position.
-        Additionally, in my current role at the UC Davis School of Law, I have learned technical troubleshooting abilities. Using tools such as ServiceNow, I have learned how to prioritize tasks, communicate within a team environment, and maintain a high standard of support within a fast-paced environment.
-      </p>
-      <img src="/path/to/about-image.png" alt="Zain Illustration" class="about-img">
-    </section>
+    <main>
+      <!-- Landing Section -->
+      <section id="home" class="landing">
+        <h2>Welcome to My Portfolio</h2>
+        <p>I’m Zain Mustafa, an electrical engineering student passionate about innovation in hardware and embedded systems.</p>
+      </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-      <h2>Projects</h2>
-      <div class="project-images">
-        <div class="project-card" onclick="openModal('modal1')">
-          <img src="/path/to/image1.jpg" alt="Project 1">
-          <div class="project-info">
-            <h3>Ultra Jot Coffee</h3>
-            <p>Package Design</p>
-          </div>
-        </div>
-        <div class="project-card" onclick="openModal('modal2')">
-          <img src="/path/to/image2.jpg" alt="Project 2">
-          <div class="project-info">
-            <h3>Ordinary Skincare</h3>
-            <p>Branding</p>
-          </div>
-        </div>
-        <div class="project-card" onclick="openModal('modal3')">
-          <img src="/path/to/image3.jpg" alt="Project 3">
-          <div class="project-info">
-            <h3>AQUAS Tee</h3>
-            <p>T-Shirt Design</p>
-          </div>
-        </div>
+      <!-- About Me Section -->
+      <section id="about" class="about">
+        <h2>I'm Zain Mustafa</h2>
+        <p>
+          As an electrical engineering student in UC Davis, I have taken a course load which has led me to develop a strong basis in the theoretical and practical aspects of engineering.
+          In my time as the electrical lead for the First Nations Launch Rocketry Team I have been able to apply this knowledge by designing and implementing systems which utilize microcontrollers to collect and store data from multiple sensors on a rocket.
+          This role honed my programming and data analysis skills which will help me with the demands of this position.
+          Additionally, in my current role at the UC Davis School of Law, I have learned technical troubleshooting abilities. Using tools such as ServiceNow, I have learned how to prioritize tasks, communicate within a team environment, and maintain a high standard of support within a fast-paced environment.
+        </p>
+        <img src="/path/to/about-image.png" alt="Zain Illustration" class="about-img">
+      </section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+  <div class="project-images">
+    <div class="project-card" onclick="openModal('modal1')">
+      <img src="/path/to/image1.jpg" alt="Project 1">
+      <div class="project-info">
+        <h3>Ultra Jot Coffee</h3>
+        <p>Package Design</p>
       </div>
-    </section>
-
-    <!-- Modals -->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('modal1')">&times;</span>
-        <h2>Ultra Jot Coffee</h2>
-        <p>A minimalist packaging design for a high-intensity coffee brand focused on outdoor and tactical consumers.</p>
-        <img src="/path/to/image1.jpg" alt="Ultra Jot Coffee Full">
-        <div class="tags">Branding, Packaging, Product</div>
+      <div class="project-link">
+        <a href="#">Learn More</a>
       </div>
     </div>
 
-    <div id="modal2" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('modal2')">&times;</span>
-        <h2>Ordinary Skincare</h2>
-        <p>Developed brand identity, packaging and visual design for a fictional skincare company promoting transparency.</p>
-        <img src="/path/to/image2.jpg" alt="Ordinary Skincare Full">
-        <div class="tags">Branding, Design, Marketing</div>
+    <div class="project-card" onclick="openModal('modal2')">
+      <img src="/path/to/image2.jpg" alt="Project 2">
+      <div class="project-info">
+        <h3>Ordinary Skincare</h3>
+        <p>Branding</p>
+      </div>
+      <div class="project-link">
+        <a href="#">Learn More</a>
       </div>
     </div>
 
-<div id="modal3" class="modal">
+<div class="project-card" onclick="openModal('modal3')">
+  <div class="project-image">
+    <img src="images/PCB_Layout.png" alt="Project 3">
+  </div>
+  <div class="project-info">
+    <h3>PCB Design Project</h3>
+    <p>Coin Flip Circuit</p>
+  </div>
+  <div class="project-link">
+    <a href="#">Learn More</a>
+  </div>
+</div>
+
+
+<div class="project-card" onclick="openModal('modal4')">
+  <div class="project-image">
+    <img src="images\breadboardpic.png" alt="Circuit Design Project">
+  </div>
+  <div class="project-info">
+    <h3>Circuit Design Project</h3>
+    <p>Logic Circuit Implementation</p>
+  </div>
+  <div class="project-link">
+    <a href="#">Learn More</a>
+  </div>
+</div>
+
+</section>
+
+
+      <!-- Modals -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal1')">&times;</span>
+          <h2>Ultra Jot Coffee</h2>
+          <p>A minimalist packaging design for a high-intensity coffee brand focused on outdoor and tactical consumers.</p>
+          <img src="/path/to/image1.jpg" alt="Ultra Jot Coffee Full">
+          <div class="tags">Branding, Packaging, Product</div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal2')">&times;</span>
+          <h2>Ordinary Skincare</h2>
+          <p>Developed brand identity, packaging and visual design for a fictional skincare company promoting transparency.</p>
+          <img src="/path/to/image2.jpg" alt="Ordinary Skincare Full">
+          <div class="tags">Branding, Design, Marketing</div>
+        </div>
+      </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <div class="modal-images">
+        <img src="images/PCB_Layout.png" alt="PCB Top View">
+        <img src="images/PCB_Finished.png" alt="PCB Layout">
+      </div>
+      <div class="modal-text">
+        <h2>PCB Design Project</h2>
+        <p><em>Course:</em> Digital Electronics</p>
+        <p><em>Duration:</em> March 4, 2024 – March 30, 2024</p>
+        <p><strong>Objective:</strong> The purpose and goal of the project was to design and create a PCB board that can solve a problem using the knowledge we learned during the course. This was an individual project and I decided to create a coin flipper that gives one of two outcomes randomly. To begin this project I first created a proof of concept by bread boarding the design and creating it on a simulation software called Multisim. Then I created the PCB design on Fusion 360 manually connecting and placing all of the components how I wanted them on the board. After printing this layout on a mask I transferred the mask onto a copper board using an iron. Then after washing away the excess copper using ferric chloride, I drilled holes in all of the places where I would place my components. Then I soldered all of the components to the board. This project challenged me to use my prior knowledge to create a brand-new circuit. During the project, I encountered some challenges. For example, during the creation of the PCB layout I had to figure out a format that would involve the least amount of jumper wires. I enjoyed working on the project and it gave me experience with creating a PCB circuit from scratch.</p>
+        <hr>
+        <h4>Skills/Softwares Used</h4>
+        <ul>
+          <li>Fusion360</li>
+          <li>Soldering</li>
+          <li>NI Multisim</li>
+          <li>PCB Design</li>
+        </ul>
+        <div class="modal-links">
+          <a class="modal-btn" href="https://docs.google.com/document/d/17yr4QliQHE5CbI5wCbOlxTwKxb5vySBzU5kPtI5ZKtg/edit?usp=sharing" target="_blank">Project Documentation</a>
+          <a class="modal-btn" href="https://drive.google.com/file/d/1hYyOvQhFyGnjIaj3TqsyJQbEbouWm56B/view" target="_blank">Proof of Concept</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div id="modal4" class="modal">
   <div class="modal-content">
-    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <span class="close" onclick="closeModal('modal4')">&times;</span>
     <div class="modal-images">
-      <img src="/path/to/pcb-image1.jpg" alt="PCB Top View">
-      <img src="/path/to/pcb-image2.jpg" alt="PCB Layout">
+      <img src="images\breadboardpic.png" alt="Breadboard Circuit">
+      <img src="images\combinationalogicMultisim.png" alt="Multisim Diagram">
     </div>
     <div class="modal-text">
-      <h2>PCB Design Project</h2>
+      <h2>Circuit Design Project</h2>
       <p><em>Course:</em> Digital Electronics</p>
-      <p><em>Duration:</em> March 4, 2024 – March 30, 2024</p>
-      <p><strong>Objective:</strong> The purpose and goal of the project was to design a PCB board that can solve a problem using the knowledge we learned during the course. This was an individual project and I decided to create a coin flipper that gives one of two outcomes randomly. To begin this project I first created a proof of concept by bread boarding the design and creating it on a simulation software called Multisim. Then I created the PCB design on Fusion 360 manually connecting and placing all of the components how I wanted them on the board. After printing this layout on a mask I transferred the mask onto a copper board using an iron. Then after washing away the excess copper using ferric chloride, I drilled holes in all of the places where I would place my components. Then I soldered all of the components to the board. This project challenged me to use my prior knowledge to create a brand-new circuit. During the project, I encountered some challenges. For example, during the creation of the PCB layout I had to figure out a format that would involve the least amount of jumper wires. I enjoyed working on the project and it gave me experience with creating a PCB circuit from scratch.</p>
+      <p><em>Duration:</em> October 11, 2023 – October 21, 2023</p>
+        <p><strong>Objective:</strong> The purpose and goal of the project was to create a circuit that solves a problem utilizing both combinational and sequential logic. Besides this requirement, our project needed at least three inputs and one output. Ultimately our group decided to create an automated soccer referee system that determines whether a foul is a red or yellow card. To create this system, I was specifically tasked with completing the combinational logic portion of both the Multisim simulation and breadboard. This challenged me to implement my understanding of AOI logic components into a practical scenario. We began the project by listing out all of the inputs and outputs that the system would need to function. Once this was complete I began creating a truth table, so we would know what outputs would need to match for each of the inputs. Then I had to create a system of logic gates so every input would create the desired output that we needed. During the project, I encountered some challenges. For example, while creating the circuit there were many gates, and often times the inputs on the circuit did not match the truth table. However in order to solve this I simplified the number of gates needed which made it much easier to complete the Multisim. Overall I enjoyed working on the project and it gave me experience with creating a circuit in order to solve a real-world problem. </p>
+        <hr>
+        <h4>Skills/Softwares Used</h4>
+        <ul>
+
+          <li>Logic Gates</li>
+          <li>NI Multisim</li>
+
+        </ul>
       <div class="modal-links">
-        <a href="#">Project Documentation</a>
-        <a href="#">Proof of Concept</a>
+        <a class="modal-btn" href="https://docs.google.com/document/d/1LkRVfkvy1hEVBEMkE1gfDSda7qVwlOzNxyT81R4hwYE/edit?usp=sharing" target="_blank">Project Documentation</a>
       </div>
     </div>
   </div>
 </div>
-  </div>
-</div>
 
 
 
-  </main>
 
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/zain-a-mustafa/" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/ZainMGit" target="_blank">GitHub</a> |
-      <a href="mailto:zain.a.mustafa@gmail.com">zain.a.mustafa@gmail.com</a>
-    </div>
-    <p>&copy; 2025 Zain Mustafa</p>
-  </footer>
+    </main>
 
-  <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = 'block';
-    }
-    function closeModal(id) {
-      document.getElementById(id).style.display = 'none';
-    }
-    window.onclick = function(event) {
-      const modals = document.querySelectorAll('.modal');
-      modals.forEach(modal => {
-        if (event.target == modal) {
-          modal.style.display = 'none';
-        }
-      });
-    }
-  </script>
-</body>
-</html>
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/zain-a-mustafa/" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/ZainMGit" target="_blank">GitHub</a> |
+        <a href="mailto:zain.a.mustafa@gmail.com">zain.a.mustafa@gmail.com</a>
+      </div>
+      <p>&copy; 2025 Zain Mustafa</p>
+    </footer>
+
+    <script>
+      function openModal(id) {
+        document.getElementById(id).style.display = 'block';
+      }
+      function closeModal(id) {
+        document.getElementById(id).style.display = 'none';
+      }
+      window.onclick = function(event) {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+          if (event.target == modal) {
+            modal.style.display = 'none';
+          }
+        });
+      }
+    </script>
+  </body>
+  </html>

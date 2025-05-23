@@ -8,12 +8,13 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #212A31;
-  color: #D3D9D4;
+  color: #CBD2D0;
   line-height: 1.6;
+  padding-bottom: 2rem;
 }
 
 header {
-  background-color: #2E3944;
+  background-color: #1B2A34;
   padding: 1rem 2rem;
   border-bottom: 1px solid #124E66;
   position: sticky;
@@ -38,13 +39,13 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #D3D9D4;
+  color: #CBD2D0;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #124E66;
+  color: #88A3AA;
 }
 
 .logo {
@@ -60,13 +61,13 @@ nav ul li a:hover {
 }
 
 .landing h2 {
-  color: #D3D9D4;
+  color: #CBD2D0;
   margin-bottom: 1rem;
 }
 
 .about, .projects {
   padding: 3rem 2rem;
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
   background-color: #2E3944;
   border-radius: 10px;
@@ -79,27 +80,47 @@ nav ul li a:hover {
   display: block;
 }
 
+.contact {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #88979D;
+}
+
+.contact a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #124E66;
+}
+
 .project-images {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
   margin-top: 2rem;
+  justify-content: center;
 }
 
 .project-card {
   position: relative;
-  flex: 1 1 30%;
+  flex: 1 1 300px;
   overflow: hidden;
-  border-radius: 8px;
-  cursor: pointer;
+  border-radius: 12px;
+  background-color: #1f2a30;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 12px 12px 0 0;
 }
 
 .project-card:hover img {
@@ -109,8 +130,8 @@ nav ul li a:hover {
 
 .project-info {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 15px;
+  left: 15px;
   color: white;
   z-index: 2;
   opacity: 0;
@@ -129,7 +150,26 @@ nav ul li a:hover {
 
 .project-info p {
   font-size: 0.9rem;
-  color: #D3D9D4;
+  color: #88979D;
+}
+
+.buttons {
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #0D3B52;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #124E66;
 }
 
 .footer {
@@ -138,7 +178,7 @@ nav ul li a:hover {
   background-color: #2E3944;
   border-top: 1px solid #124E66;
   font-size: 0.9rem;
-  color: #748D92;
+  color: #88979D;
   margin-top: 2rem;
 }
 
@@ -172,7 +212,7 @@ nav ul li a:hover {
 
 .modal-content {
   background-color: #f9f9f9;
-  color: #222;
+  color: #212A31;
   margin: 5% auto;
   padding: 2rem;
   border-radius: 8px;
@@ -223,14 +263,24 @@ nav ul li a:hover {
 }
 
 .modal-content .modal-links {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
-.modal-content .modal-links a {
+.modal-btn {
+  display: inline-block;
+  background-color: #0D3B52;
+  color: #CBD2D0;
+  padding: 0.6rem 1.2rem;
   text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
-  color: #1261a0;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+}
+
+.modal-btn:hover {
+  background-color: #124E66;
+  transform: scale(1.05);
 }
 
 .modal-content .tags {
@@ -282,4 +332,44 @@ nav ul li a:hover {
     flex-direction: column;
     padding: 1.5rem;
   }
+}
+
+.project-link {
+  text-align: center;
+  color: #CBD2D0;
+  padding: 0.75rem;
+  background-color: #1f2a30;
+  border-top: 1px solid #2E3944;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-link {
+  color: #748D92;
+  opacity: 0;
+}
+
+.project-link a {
+  color: #CBD2D0;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.project-link a:hover {
+  color: #88A3AA;
+}
+
+.project-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  background-color: #1f2a30;
+}
+
+.project-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }

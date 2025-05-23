@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Zain Mustafa</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .scroll-project {
+      background-color: #f9f9f9;
+      color: #212A31;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 1000px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .scroll-project img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    .scroll-project .scroll-images {
+      flex: 1 1 45%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .scroll-project .scroll-text {
+      flex: 1 1 50%;
+      font-size: 0.95rem;
+    }
+
+    .scroll-project h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .scroll-project strong {
+      color: #b30000;
+    }
+
+    .scroll-project ul {
+      padding-left: 1rem;
+    }
+
+    .scroll-project .modal-links {
+      margin-top: 1.5rem;
+    }
+
+    .scroll-project .modal-btn {
+      display: inline-block;
+      background-color: #124E66;
+      color: #D3D9D4;
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      margin-right: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      font-weight: 600;
+    }
+
+    .scroll-project .modal-btn:hover {
+      background-color: #2E3944;
+      transform: scale(1.05);
+    }
+
+    .scroll-project em {
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">Portfolio</h1>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PCB Project -->
+    <div class="scroll-project">
+      <div class="scroll-images">
+        <img src="images/PCB_Layout.png" alt="PCB Layout">
+        <img src="images/PCB_Finished.png" alt="PCB Final">
+      </div>
+      <div class="scroll-text">
+        <h2>PCB Design Project</h2>
+        <em>Course: Digital Electronics</em>
+        <em>Duration: March 4, 2024 – March 30, 2024</em>
+        <p><strong>Objective:</strong> The purpose and goal of the project was to design and create a PCB board that can solve a problem using the knowledge we learned during the course. This was an individual project and I decided to create a coin flipper that gives one of two outcomes randomly. To begin this project I first created a proof of concept by bread boarding the design and creating it on a simulation software called Multisim. Then I created the PCB design on Fusion 360 manually connecting and placing all of the components how I wanted them on the board. After printing this layout on a mask I transferred the mask onto a copper board using an iron. Then after washing away the excess copper using ferric chloride, I drilled holes in all of the places where I would place my components. Then I soldered all of the components to the board. This project challenged me to use my prior knowledge to create a brand-new circuit. During the project, I encountered some challenges. For example, during the creation of the PCB layout I had to figure out a format that would involve the least amount of jumper wires. I enjoyed working on the project and it gave me experience with creating a PCB circuit from scratch.</p>
+        <h4>Skills/Softwares Used</h4>
+        <ul>
+          <li>Fusion360</li>
+          <li>Soldering</li>
+          <li>NI Multisim</li>
+          <li>PCB Design</li>
+        </ul>
+        <div class="modal-links">
+          <a class="modal-btn" href="https://docs.google.com/document/d/17yr4QliQHE5CbI5wCbOlxTwKxb5vySBzU5kPtI5ZKtg/edit?usp=sharing" target="_blank">Project Documentation</a>
+          <a class="modal-btn" href="https://drive.google.com/file/d/1hYyOvQhFyGnjIaj3TqsyJQbEbouWm56B/view" target="_blank">Proof of Concept</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Circuit Design Project -->
+    <div class="scroll-project">
+      <div class="scroll-images">
+        <img src="images/breadboardpic.png" alt="Breadboard Circuit">
+        <img src="images/combinationalogicMultisim.png" alt="Multisim Diagram">
+      </div>
+      <div class="scroll-text">
+        <h2>Circuit Design Project</h2>
+        <em>Course: Digital Electronics</em>
+        <em>Duration: October 11, 2023 – October 21, 2023</em>
+        <p><strong>Objective:</strong> The purpose and goal of the project was to create a circuit that solves a problem utilizing both combinational and sequential logic. Our project needed at least three inputs and one output. We created an automated soccer referee system that determines whether a foul is a red or yellow card. I was specifically tasked with completing the combinational logic portion of both the Multisim simulation and breadboard. This challenged me to implement my understanding of AOI logic components into a practical scenario. We began the project by listing all inputs and outputs needed to function. I created a truth table and a system of logic gates to meet desired outputs. I simplified gate use for easier completion in Multisim. Overall, I enjoyed this project and gained real-world circuit design experience.</p>
+        <h4>Skills/Softwares Used</h4>
+        <ul>
+          <li>Logic Gates</li>
+          <li>NI Multisim</li>
+        </ul>
+        <div class="modal-links">
+          <a class="modal-btn" href="https://docs.google.com/document/d/1LkRVfkvy1hEVBEMkE1gfDSda7qVwlOzNxyT81R4hwYE/edit?usp=sharing" target="_blank">Project Documentation</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/zain-a-mustafa/" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/ZainMGit" target="_blank">GitHub</a> |
+      <a href="mailto:zain.a.mustafa@gmail.com">zain.a.mustafa@gmail.com</a>
+    </div>
+    <p>&copy; 2025 Zain Mustafa</p>
+  </footer>
+</body>
+</html>
