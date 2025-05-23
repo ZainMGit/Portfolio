@@ -1,823 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Portfolio V2</title>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
-	<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
-    <link rel="stylesheet" type="text/css" href="css/vendor.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-	<!-- script
-	================================================== -->
-	<script src="js/modernizr.js"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zain Mustafa Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <nav>
+      <h1 class="logo">Portfolio</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<div id="entire-wrapper">
+  <main>
+    <!-- Landing Section -->
+    <section id="home" class="landing">
+      <h2>Welcome to My Portfolio</h2>
+      <p>I’m Zain Mustafa, an electrical engineering student passionate about innovation in hardware and embedded systems.</p>
+    </section>
 
-<header id="header">
-	<div class="header-wrap">
-		<div class="main-logo">
-			<a href="#">
-				<img src="images/main-logo.png" alt="logo">
-			</a>
-		</div><!--main-logo-->
+    <!-- About Me Section -->
+    <section id="about" class="about">
+      <h2>I'm Zain Mustafa</h2>
+      <p>
+        As an electrical engineering student in UC Davis, I have taken a course load which has led me to develop a strong basis in the theoretical and practical aspects of engineering.
+        In my time as the electrical lead for the First Nations Launch Rocketry Team I have been able to apply this knowledge by designing and implementing systems which utilize microcontrollers to collect and store data from multiple sensors on a rocket.
+        This role honed my programming and data analysis skills which will help me with the demands of this position.
+        Additionally, in my current role at the UC Davis School of Law, I have learned technical troubleshooting abilities. Using tools such as ServiceNow, I have learned how to prioritize tasks, communicate within a team environment, and maintain a high standard of support within a fast-paced environment.
+      </p>
+      <img src="/path/to/about-image.png" alt="Zain Illustration" class="about-img">
+    </section>
 
-		<nav id="navbar">
-			<div class="top-menu" id="navigation">
-				<ul class="menu-list">
-					<li class="menu-item active"><a href="#home" data-effect="Home">Home</a></li>
-					<li class="menu-item"><a href="#about-me" class="nav-link" data-effect="About Me">About</a></li>
-					<li class="menu-item"><a href="#services" class="nav-link" data-effect="Services">Services</a></li>
-					<li class="menu-item"><a href="#portfolio" class="nav-link" data-effect="Portfolio">Portfolio</a></li>
-					<li class="menu-item"><a href="#clients" class="nav-link" data-effect="Clients">Clients</a></li>
-					<li class="menu-item"><a href="#testimonial" class="nav-link" data-effect="Testimonial">Testimonial</a></li>
-					<li class="menu-item"><a href="#latest-blog" class="nav-link" data-effect="Blog">Blog</a></li>
-					<li class="menu-item"><a href="#contact" class="nav-link" data-effect="Contact">Contact</a></li>
-				</ul>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project-images">
+        <div class="project-card" onclick="openModal('modal1')">
+          <img src="/path/to/image1.jpg" alt="Project 1">
+          <div class="project-info">
+            <h3>Ultra Jot Coffee</h3>
+            <p>Package Design</p>
+          </div>
+        </div>
+        <div class="project-card" onclick="openModal('modal2')">
+          <img src="/path/to/image2.jpg" alt="Project 2">
+          <div class="project-info">
+            <h3>Ordinary Skincare</h3>
+            <p>Branding</p>
+          </div>
+        </div>
+        <div class="project-card" onclick="openModal('modal3')">
+          <img src="/path/to/image3.jpg" alt="Project 3">
+          <div class="project-info">
+            <h3>AQUAS Tee</h3>
+            <p>T-Shirt Design</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				<div class="menu-icon">
-					<a href="javascript:void(0);" class="bar-icon" onclick="e">
-				    	<i class="icon icon-segment"></i>
-				 	</a>
-					<a href="javascript:void(0);" class="bar-icon" onclick="e">
-				    	<i class="icon icon-close"></i>
-				 	</a>
-				</div>
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>Ultra Jot Coffee</h2>
+        <p>A minimalist packaging design for a high-intensity coffee brand focused on outdoor and tactical consumers.</p>
+        <img src="/path/to/image1.jpg" alt="Ultra Jot Coffee Full">
+        <div class="tags">Branding, Packaging, Product</div>
+      </div>
+    </div>
 
-			</div>
-		</nav>	
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h2>Ordinary Skincare</h2>
+        <p>Developed brand identity, packaging and visual design for a fictional skincare company promoting transparency.</p>
+        <img src="/path/to/image2.jpg" alt="Ordinary Skincare Full">
+        <div class="tags">Branding, Design, Marketing</div>
+      </div>
+    </div>
 
-	</div><!--header-wrap-->
-</header>
-
-<div id="billboard">
-	<img src="images/main-banner.jpg" alt="post" class="banner-image">
-	<div class="banner-content">
-
-		<div class="banner-header">
-			<h1>Hello, I’m <span class="colored">Lucas Alves</span></h1>
-			<p>Graphic Designer & Ceo of Graphic Type. I love to provide quality works.</p>
-			<div class="btn-wrap">
-				<a href="#" class="btn-outline-orange btn-pill">Get in touch</a>
-			</div>
-		</div><!--banner-header-->
-		<div class="socila-links">
-			<ul>
-				<li><a href="#"><i class="icon icon-facebook"></i></a></li>
-				<li><a href="#"><i class="icon icon-twitter"></i></a></li>
-				<li><a href="#"><i class="icon icon-behance-square"></i></a></li>
-				<li><a href="#"><i class="icon icon-youtube-play"></i></a></li>
-				<li><a href="#"><i class="icon icon-pinterest-p"></i></a></li>
-			</ul>
-		</div><!--socila-links-->
-
-	</div>
-</div><!--billboard-->
-
-<main id="main">
-
-<section id="about-me">
-	<div class="container">
-		<div class="row">
-			<div class="inner-content">
-				<div class="section-header">
-					<h2 class="section-title">About Me</h2>
-				</div>
-				<div class="person-information">
-					<div class="description">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dapib eu placerat at nisl posuere aliquet amet pharetra malesuada. Spendisse nisl ac at tortor. Sit faucibus suspendisse risus vulputate pulvinar cursus suspendisse risus vulputate  enim pharetra eu.</p>
-						<p>Sit faucibus suspendisse risus vulputate pulvinar cursus enim hareta  eu. Sagittis enim morb. Suspendisse risus.</p>
-						<div class="general-button">
-							<div class="btn-wrap">
-								<a href="#" class="btn-accent">Hire Me</a>
-							</div>
-							<div class="btn-wrap">
-								<a href="#" class="btn-outline-dark">Download CV</a>
-							</div>
-						</div>
-					</div>
-					<div class="skill-chart">
-						<ul class="skill-chart-list">
-							<li>
-							<div class="skill-title">Adobe Photoshop</div>
-							<span class="skill ninety-percent"></span>
-							</li>
-							<li>
-							<div class="skill-title">Adobe Illustrator</div>
-							<span class="skill eighty-percent"></span>
-							</li>
-							<li>
-							<div class="skill-title">Adobe After Effect</div>
-							<span class="skill fifty-percent"></span>
-							</li>
-							<li>
-							<div class="skill-title">Adobe Indesign</div>
-							<span class="skill ninty-percent"></span>
-							</li>
-						</ul>
-					</div>
-				</div><!--portfolio-wrap-->
-			</div><!--inner-content-->
-		</div>
-	</div>
-</section>
-
-<section id="services">
-	<div class="container">
-		<div class="row">
-			<div class="inner-content">
-				<div class="section-header align-center">
-					<h2 class="section-title">What I Offer</h2>
-					<p>Things that I can do for my clients. Just make your good trust I love to provide quality works.</p>
-				</div>
-				<div class="service-slider grid">
-					<div class="column">
-						<span class="iconify" data-icon="icons8:brush"></span>
-						<h3>Branding Design</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci eget mi elit cursus donec amet sed sagittis.</p>
-					</div>
-					<div class="column">
-						<span class="iconify" data-icon="akar-icons:shipping-box-v1"></span>
-						<h3>Branding Design</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci eget mi elit cursus donec amet sed sagittis.</p>
-					</div>								
-					<div class="column">
-						<span class="iconify" data-icon="ph:t-shirt"></span>
-						<h3>Branding Design</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci eget mi elit cursus donec amet sed sagittis.</p>
-					</div>	
-					<div class="column">
-						<span class="iconify" data-icon="akar-icons:shipping-box-v1"></span>
-						<h3>Branding Design</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci eget mi elit cursus donec amet sed sagittis.</p>
-					</div>	
-					<div class="column">
-						<span class="iconify" data-icon="ph:t-shirt"></span>
-						<h3>Branding Design</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci eget mi elit cursus donec amet sed sagittis.</p>
-					</div>	
-				</div><!--services-content-->
-			</div>
-		</div>
-	</div>		
-</section>
-
-<section id="portfolio">			
-	<div class="container">
-		<div class="row">
-			<div class="inner-content">					
-
-				<div class="section-header align-center">
-					<h2 class="section-title">Portfolio</h2>
-				</div>
-
-					<ul class="tabs">
-					  <li data-tab-target="#all" class="active tab">all</li>
-					  <li data-tab-target="#branding" class="tab">Branding</li>
-					  <li data-tab-target="#tshirt" class="tab">T-Shirt</li>
-					  <li data-tab-target="#package" class="tab">Package</li>
-					  <li data-tab-target="#poster" class="tab">Poster</li>
-					</ul>
-
-					<div class="tab-content">
-					  <div id="all" data-tab-content class="active">
-					    <div class="tab-element">
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab1.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-									<a href="#" class="btn-arrow light">
-									<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab2.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab3.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab4.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab5.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab6.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab7.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab8.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab9.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-					  	</div>
-					  </div>
-					  <div id="branding" data-tab-content>
-					    <div class="tab-element">
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab2.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-									<a href="#" class="btn-arrow light">
-									<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab4.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab6.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab8.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-					    </div>
-					  </div>
-					  <div id="tshirt" data-tab-content>
-					    <div class="tab-element">
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab9.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-									<a href="#" class="btn-arrow light">
-									<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab7.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab5.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab4.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-					    </div>
-					  </div>
-					  <div id="package" data-tab-content>
-					    <div class="tab-element">
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab6.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-									<a href="#" class="btn-arrow light">
-									<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab4.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab2.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab3.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-					    </div>
-					  </div>
-					  <div id="poster" data-tab-content>
-					    <div class="tab-element">
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab3.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-									<a href="#" class="btn-arrow light">
-									<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab2.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-				    		<figure>
-					    		<a href="">
-					    			<img src="images/tab1.jpg"  class="tab-image">
-					    		</a>
-					    		<figcaption>
-					    			<div class="caption">
-						    			<h3>ultra jot Coffee</h3>
-						    			<span class="category">Package Design</span>
-					    			</div>
-										<a href="#" class="btn-arrow light">
-										<i class="icon icon-arrow-right"></i></a>
-					    		</figcaption>
-				    		</figure>
-					    </div>
-					  </div>
-				</div><!--tab-content-->
-
-				<div class="btn-wrap align-center">
-					<a href="#" class="btn-accent">View Portfolio</a>
-				</div>
-
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="clients">
-	<div class="container">
-		<div class="row">
-			<div class="inner-content">
-				<div class="section-header align-center">
-					<h2 class="section-title light">Brands I’ve Worked</h2>
-					<p>Things that I can do for my clients. Just make your good trust I love to provide quality works.</p>
-				</div>
-
-				<div class="top-grid-item">
-					<div class="grid">	
-						<div class="clients-item">
-							<i class="icon icon-bird"></i>
-						</div>							
-						<div class="clients-item">
-							<i class="icon icon-squirrel"></i>
-						</div>							
-						<div class="clients-item">
-							<i class="icon icon-brain"></i>
-						</div>							
-						<div class="clients-item">
-							<i class="icon icon-guitar"></i>
-						</div>							
-						<div class="clients-item">
-							<i class="icon icon-apple"></i>
-						</div>							
-						<div class="clients-item">
-							<i class="icon icon-hand"></i>
-						</div>	
-					</div>
-				</div>
-
-				<div class="bottom-grid-item">					
-					<div class="grid">	
-						<div class="clients-item">
-							<i class="icon icon-flower-1"></i>
-						</div>							
-						<div class="clients-item">
-							<i class="icon icon-drink"></i>
-						</div>							
-						<div class="clients-item">
-							<i class="icon icon-half-cirlce"></i>
-						</div>							
-						<div class="clients-item">
-							<i class="icon icon-finger-print"></i>
-						</div>							
-						<div class="clients-item">
-							<i class="icon icon-cone"></i>
-						</div>							
-						<div class="clients-item">
-							<i class="icon icon-tooth"></i>
-						</div>	
-					</div>
-				</div>	
-
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="testimonial">
-	<div class="container">
-		<div class="row">			
-			<div class="inner-content">
-				<div class="testimonial-slider">
-
-					<div class="grid review-item">
-						<figure>
-							<img src="images/review-image.jpg" alt="review" class="review-image">
-						</figure>
-						<div class="reviews-content">
-							<div class="testimonials-inner">
-								<q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dapibus eu placerat at nisl posuere aliquet amet pharetra malesuada. Suspendisse nisl ac at tortor. Sit faucibus placerat at nisl posuere aliquet amet pharetra suspendisse risus.</q>
-								<div class="testimonial-author">
-									<div class="author-detail">
-										<div class="name">Emma Brown</div>
-										<div class="author-title">CEO - Squirrel Sweets</div>
-									</div>
-								</div>
-							</div>
-						</div><!--reviews-content-->
-					</div>
-
-					<div class="grid review-item">
-						<figure>
-							<img src="images/review-image2.jpg" alt="review" class="review-image">
-						</figure>
-						<div class="reviews-content">
-							<div class="testimonials-inner">
-								<q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dapibus eu placerat at nisl posuere aliquet amet pharetra malesuada. Suspendisse nisl ac at tortor. Sit faucibus placerat at nisl posuere aliquet amet pharetra suspendisse risus.</q>
-								<div class="testimonial-author">
-									<div class="author-detail">
-										<div class="name">Jennie Red</div>
-										<div class="author-title">CEO - Squirrel Sweets</div>
-									</div>
-								</div>
-							</div>
-						</div><!--reviews-content-->
-					</div>
-
-					<div class="grid review-item">
-						<figure>
-							<img src="images/review-image3.jpg" alt="review" class="review-image">
-						</figure>
-						<div class="reviews-content">
-							<div class="testimonials-inner">
-								<q>Consectetur adipiscing elit. Dapibus eu placerat at nisl posuere aliquet amet pharetra malesuada. Suspendisse nisl ac at tortor. Sit faucibus placerat at nisl posuere aliquet amet pharetra suspendisse risus.</q>
-								<div class="testimonial-author">
-									<div class="author-detail">
-										<div class="name">Jisoo White</div>
-										<div class="author-title">CEO - Squirrel Sweets</div>
-									</div>
-								</div>
-							</div>
-						</div><!--reviews-content-->
-					</div>
-
-				</div><!--testimonial-slider-->
-
-				<div class="button-container">
-					<button class="prev slick-arrow">
-						<i class="icon icon-arrow-left"></i>
-					</button>
-					<button class="next slick-arrow">
-						<i class="icon icon-arrow-right"></i>
-					</button>
-				</div>
-
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="latest-blog">
-	<div class="container">
-		<div class="row">
-			<div class="inner-content">				
-				<div class="section-header align-center">
-					<h2 class="section-title">Blog Posts</h2>
-				</div>
-				<div class="post-content">
-
-				<div class="grid">
-					<div class="post-item">
-						<div class="meta-date">
-							<span class="day">30</span>
-							<span class="month">Aug</span>
-						</div>
-						<h3>
-							<a href="#">Best rules to follow for achieving business goals</a>
-						</h3>	
-					</div>
-					<div class="btn-wrap">
-						<a href="#" class="btn-normal">Read More
-						<i class="icon icon-arrow-top"></i>
-						</a>
-					</div>
-				</div>
-
-				<div class="grid">
-					<div class="post-item">
-						<div class="meta-date">
-							<span class="day">03</span>
-							<span class="month">Nov</span>
-						</div>
-						<h3>
-							<a href="#">Why should we invest more in branding first?</a>
-						</h3>	
-					</div>
-					<div class="btn-wrap">
-						<a href="#" class="btn-normal">Read More
-						<i class="icon icon-arrow-top"></i>
-						</a>
-					</div>
-				</div>
-
-				<div class="grid">
-					<div class="post-item">
-						<div class="meta-date">
-							<span class="day">16</span>
-							<span class="month">Aug</span>
-						</div>
-						<h3>
-							<a href="#">Top 100 most beautiful t-shirt print design</a>
-						</h3>	
-					</div>
-					<div class="btn-wrap">
-						<a href="#" class="btn-normal">Read More
-						<i class="icon icon-arrow-top"></i>
-						</a>
-					</div>
-				</div>
-
-				</div><!--post-content-->
-
-				<div class="btn-wrap align-center">
-					<a href="#" class="btn-accent">Read All Blogs</a>
-				</div>
-
-		</div>
-	</div>
-</section>
-
-<section id="achievement">
-	<div class="container">
-		<div class="row">
-			<div class="inner-content">
-				<div class="grid">
-
-					<div class="achieve-item">
-						<div class="achieve-count">720+</div>
-						<div class="achieve-title">Projects Completed</div>	
-					</div>
-
-					<div class="achieve-item">
-						<div class="achieve-count">920+</div>
-						<div class="achieve-title">Products Sold</div>	
-					</div>
-
-					<div class="achieve-item">
-						<div class="achieve-count">25+</div>
-						<div class="achieve-title">Awards Received</div>	
-					</div>
-
-					<div class="achieve-item">
-						<div class="achieve-count">700+</div>
-						<div class="achieve-title">Happy Clients</div>	
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="contact">
-	<div class="container">
-		<div class="row">
-			<div class="inner-content">
-				<h2>Let’s work together</h2>
-				<p>I’m available for freelance work. Have any projects in your mind? Just feel free to contact me</p>
-				<div class="btn-wrap align-center">
-					<a href="#" class="btn-outline-orange btn-pill">Contact me</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-</main>
-
-<div id="footer-bottom">
-	<div class="container">
-		<div class="row">
-			<div class="inner-content">
-				<div class="grid">
-					<div class="copyright">
-						<p>© 2021 Lucas Alves. All Rights Reserved by <a href="http://www.templatesjungle.com/"> TemplatesJungle</a></p>
-					</div>
-					<div class="social-links">
-						<ul>
-							<li><a href="#"><i class="icon icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon icon-behance-square"></i></a></li>
-							<li><a href="#"><i class="icon icon-youtube-play"></i></a></li>
-							<li><a href="#"><i class="icon icon-pinterest-p"></i></a></li>
-						</ul>
-					</div>	
-				</div>
-
-			</div><!--footer-bottom-content-->			
-		</div>
-	</div>
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <div class="modal-images">
+      <img src="/path/to/pcb-image1.jpg" alt="PCB Top View">
+      <img src="/path/to/pcb-image2.jpg" alt="PCB Layout">
+    </div>
+    <div class="modal-text">
+      <h2>PCB Design Project</h2>
+      <p><em>Course:</em> Digital Electronics</p>
+      <p><em>Duration:</em> March 4, 2024 – March 30, 2024</p>
+      <p><strong>Objective:</strong> The purpose and goal of the project was to design a PCB board that can solve a problem using the knowledge we learned during the course. This was an individual project and I decided to create a coin flipper that gives one of two outcomes randomly. To begin this project I first created a proof of concept by bread boarding the design and creating it on a simulation software called Multisim. Then I created the PCB design on Fusion 360 manually connecting and placing all of the components how I wanted them on the board. After printing this layout on a mask I transferred the mask onto a copper board using an iron. Then after washing away the excess copper using ferric chloride, I drilled holes in all of the places where I would place my components. Then I soldered all of the components to the board. This project challenged me to use my prior knowledge to create a brand-new circuit. During the project, I encountered some challenges. For example, during the creation of the PCB layout I had to figure out a format that would involve the least amount of jumper wires. I enjoyed working on the project and it gave me experience with creating a PCB circuit from scratch.</p>
+      <div class="modal-links">
+        <a href="#">Project Documentation</a>
+        <a href="#">Proof of Concept</a>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
 </div>
 
-</div><!--entire-wrapper-->
 
 
-	<script src="js/jquery-1.11.0.min.js"></script>
-	<script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/script.js"></script>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/zain-a-mustafa/" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/ZainMGit" target="_blank">GitHub</a> |
+      <a href="mailto:zain.a.mustafa@gmail.com">zain.a.mustafa@gmail.com</a>
+    </div>
+    <p>&copy; 2025 Zain Mustafa</p>
+  </footer>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
