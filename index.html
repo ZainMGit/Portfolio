@@ -25,6 +25,18 @@
       <section id="home" class="landing">
         <h2>Welcome to My Portfolio</h2>
         <p>I’m Zain Mustafa, an electrical engineering student passionate about innovation in hardware and embedded systems.</p>
+        <div class="social-icons">
+  <a href="https://github.com/ZainMGit" target="_blank">
+    <img src="images/github-icon.png" alt="GitHub" />
+  </a>
+  <a href="https://www.linkedin.com/in/zain-a-mustafa/" target="_blank">
+    <img src="images/linkedin-icon.png" alt="LinkedIn" />
+  </a>
+  <a href="mailto:zain.a.mustafa@gmail.com">
+    <img src="images/email-icon.png" alt="Email" />
+  </a>
+</div>
+
       </section>
 
       <!-- About Me Section -->
@@ -43,16 +55,19 @@
 <section id="projects" class="projects">
   <h2>Projects</h2>
   <div class="project-images">
-    <div class="project-card" onclick="openModal('modal1')">
-      <img src="/path/to/image1.jpg" alt="Project 1">
-      <div class="project-info">
-        <h3>Ultra Jot Coffee</h3>
-        <p>Package Design</p>
-      </div>
-      <div class="project-link">
-        <a href="#">Learn More</a>
-      </div>
-    </div>
+    <div class="project-card" onclick="openModal('modal0')">
+  <div class="project-image">
+    <img src="images/rocket_board.jpg" alt="Rocketry Payload Electronics">
+  </div>
+  <div class="project-info">
+    <h3>FNL Rocketry Payload</h3>
+    <p>Custom Arduino Payload for Rocketry</p>
+  </div>
+  <div class="project-link">
+    <a href="#">Learn More</a>
+  </div>
+</div>
+
 
     <div class="project-card" onclick="openModal('modal2')">
       <img src="/path/to/image2.jpg" alt="Project 2">
@@ -66,17 +81,19 @@
     </div>
 
 <div class="project-card" onclick="openModal('modal3')">
-  <div class="project-image">
-    <img src="images/PCB_Layout.png" alt="Project 3">
-  </div>
+<div class="project-image stretch-wrapper">
+  <img src="images/PCB_Layout.png" alt="PCB Layout" class="stretch-img">
+</div>
+
   <div class="project-info">
-    <h3>PCB Design Project</h3>
-    <p>Coin Flip Circuit</p>
+    <h3>PCB Design</h3>
+    <p>Custom Circuit Board</p>
   </div>
   <div class="project-link">
     <a href="#">Learn More</a>
   </div>
 </div>
+
 
 
 <div class="project-card" onclick="openModal('modal4')">
@@ -96,15 +113,37 @@
 
 
       <!-- Modals -->
-      <div id="modal1" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('modal1')">&times;</span>
-          <h2>Ultra Jot Coffee</h2>
-          <p>A minimalist packaging design for a high-intensity coffee brand focused on outdoor and tactical consumers.</p>
-          <img src="/path/to/image1.jpg" alt="Ultra Jot Coffee Full">
-          <div class="tags">Branding, Packaging, Product</div>
-        </div>
+<div id="modal0" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal0')">&times;</span>
+    <div class="modal-images">
+      <img src="images/rocket_board.jpg" alt="Electronics Board">
+<img src="images/rocket_payload.jpg" alt="Payload Assembly" class="payload-cropped">
+<img src="images/rocket_launch.jpg" alt="Rocket Launch" class="launch-cropped">
+    </div>
+    <div class="modal-text">
+      <h2>Rocketry Payload Electronics</h2>
+      <p><em>Purpose:</em> First Nations Launch Rocketry Competition</p>
+      <p><em>Duration:</em> October 13, 2024 – April 26, 2025</p>
+<p><strong>Objective:</strong> The First Nations Launch (FNL) is a NASA-sponsored high-powered rocketry competition where teams must design, build, and launch rockets with scientific payloads. This year’s payload specifications required us to create a payload system to record environmental data and demonstrate real-time onboard sensing.</p>
+    <p>As the Payload Lead, I decided putting an atmospheric pressure and a 9 degrees of freedom sensor into our rocket. I programmed and calibrated the BMP280 sensor for pressure/altitude data, the ISM330DHCX sensor for acceleration and gyroscope data, and the MMC5983MA sensor for magnetometer measurements. I led breadboarding and final assembly of the electronics payload where I coordinated with the avionics team to ensure proper fit and thermal safety.</p>
+    <p>I had to conduct extensive ground testing and debugging to ensure the payload could handle real launch conditions without crashing or corrupting data. We also had two testing launches of the payload bay before the competition date where I made revisions to the payload after each test. After these test launches I created MATLAB scripts to plot the data which the sensors were collecting after launch. I delivered detailed technical write-ups and system diagrams for the competition through the different phases of development for the rocket.</p>
+    <hr>
+    <h4>Skills/Softwares Used</h4>
+      <ul>
+        <li>MATLAB</li>
+        <li>Arduino programming (C++)</li>
+        <li>Sensor integration (I²C)</li>
+        <li>RockSim & OpenRocket</li>
+      </ul>
+      <div class="modal-links">
+        <a class="modal-btn" href="https://github.com/ZainMGit/UCD_First_Nations_Launch_Electronics" target="_blank">GitHub</a>
+        <a class="modal-btn" href="https://drive.google.com/file/d/14sfGpHxR1yWJjb9ZQzrJXICkIUTj16yS/view?usp=sharing" target="_blank">Documentation</a>
       </div>
+    </div>
+  </div>
+</div>
+
 
 
 
