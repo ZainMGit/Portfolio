@@ -524,9 +524,110 @@ nav ul li a:hover {
 }
 
 .pcb-stretch {
-  width: 100%; /* Fill the width of its flexible container */
-  height: 500%; /* Fill the height of its flexible container */
+  width: 50%; /* Fill the width of its flexible container */
+  height: 50%; /* Fill the height of its flexible container */
   object-fit: contain; /* Shows the entire image without cropping. Change to 'cover' if cropping is acceptable to fill completely. */
   display: block;
   /* Remove border-bottom-left-radius and border-bottom-right-radius if you want it to match project-image img's radius */
 }
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  background-color: #2E3944;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+  height: 220px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+
+#pcb-project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#pcb-project-card .project-image {
+  flex-grow: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+#pcb-project-card .pcb-stretch {
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 12px 0 0;
+}
+
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding-top: 10px;  /* restores small space above image */
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #2e3b47; /* or your card background */
+}
+
+.project-image {
+  height: 220px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.project-info, .project-link {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+
+/* Specific to PCB */
+img.pcb-image {
+  margin-top: 0px !important;      /* reduce top spacing */
+  padding-top: 0px !important;     /* reduce top padding */
+  display: block;
+}
+
+img.pcb-image {
+  margin-top: 0px !important;      /* reduce top spacing */
+  padding-top: 0px !important;     /* reduce top padding */
+  display: block;
+  height: 100%;
+}
+
+
+
