@@ -41,6 +41,11 @@
 
       <!-- About Me Section -->
       <section id="about" class="about">
+       <section id="about" class="about-section">
+  <div class="about-container">
+    <img src="images/about-image.jpg" alt="Zain Illustration" class="about-img">
+    <div class="about-text">
+       
         <h2>I'm Zain Mustafa</h2>
         <p>
           As an electrical engineering student in UC Davis, I have taken a course load which has led me to develop a strong basis in the theoretical and practical aspects of engineering.
@@ -48,8 +53,11 @@
           This role honed my programming and data analysis skills which will help me with the demands of this position.
           Additionally, in my current role at the UC Davis School of Law, I have learned technical troubleshooting abilities. Using tools such as ServiceNow, I have learned how to prioritize tasks, communicate within a team environment, and maintain a high standard of support within a fast-paced environment.
         </p>
-        <img src="/path/to/about-image.png" alt="Zain Illustration" class="about-img">
+      
       </section>
+
+
+
     <!-- Skills  Section -->
 <section id="skills" class="section">
   <div class="card skills-card">
@@ -66,6 +74,8 @@
       <li>Python</li>
       <li>ServiceNow</li>
       <li>KiCad</li>
+      <li>MongoDB Atlas</li>
+
     </ul>
   </div>
 </section>
@@ -73,9 +83,36 @@
 
 
 <!-- Projects Section -->
+
+
+
+
 <section id="projects" class="projects">
   <h2>Projects</h2>
   <div class="project-images">
+
+
+
+
+<div class="project-card" onclick="openModal('modalZainlink')">
+  <div class="project-image">
+    <img src="images/zainlink_home.png" alt="ZainLink Home" />
+  </div>
+  <div class="project-info">
+    <h3>ZainLink URL Shortener</h3>
+    <p>Full-Stack Web Application</p>
+  </div>
+  <div class="project-link">
+    <a href="#">Learn More</a>
+  </div>
+</div>
+
+
+
+
+
+
+ 
     <div class="project-card" onclick="openModal('modal0')">
   <div class="project-image">
     <img src="images/rocket_board.jpg" alt="Rocketry Payload Electronics">
@@ -90,16 +127,6 @@
 </div>
 
 
-    <div class="project-card" onclick="openModal('modal2')">
-      <img src="/path/to/image2.jpg" alt="Project 2">
-      <div class="project-info">
-        <h3>Ordinary Skincare</h3>
-        <p>Branding</p>
-      </div>
-      <div class="project-link">
-        <a href="#">Learn More</a>
-      </div>
-    </div>
 
 <div class="project-card" onclick="openModal('modal3')">
   <div class="project-image pcb-image">
@@ -133,6 +160,50 @@
 
 
       <!-- Modals -->
+
+<div id="modalZainlink" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalZainlink')">&times;</span>
+    <div class="modal-images">
+      <img src="images/zainlink_dashboard.png" alt="ZainLink Dashboard" />
+      <img src="images/zainlink_home.png" alt="ZainLink Home Page" />
+      <img src="images/login.png" alt="ZainLink Login Page" />
+    </div>
+    <div class="modal-text">
+      <h2>ZainLink: Full-Stack URL Shortener</h2>
+      <p><em>Purpose:</em> Personal Project</p>
+      <p><em>Duration:</em> May 13, 2024 – Ongoing</p>
+      <p><strong>Objective:</strong> ZainLink is a full-stack web application designed to securely shorten URLs with optional custom aliases. The website features include CAPTCHA protection, user authentication, and a live dashboard for managing links which the user has created. There is also an admin account which can manage all links created by other users straight from the dashboard on the website. </p>
+      <p>I handled both the frontend and backend architecture. The backend is built using the python framework Flask and connected to a MongoDB Atlas database. For deployment, I used Render for backend hosting and IONOS to point a custom domain (zainlink.com) to the app using DNS records. The frontend is built with HTML and CSS. I also added Google Analytics tracking to measure real user engagement.
+</p>
+
+      <hr>
+      <h4>Skills/Softwares Used</h4>
+      <ul>
+        <li>HTML/CSS</li>
+        <li>Flask (Python)</li>
+        <li>MongoDB Atlas</li>
+        <li>CAPTCHA Integration</li>
+        <li>Google Analytics</li>
+        <li>DNS Configuration</li>
+      </ul>
+
+      <div class="modal-links">
+        <a class="modal-btn" href="https://zainlink.com" target="_blank">Live Website</a>
+        <a class="modal-btn" href="https://github.com/ZainMGit/ZainLink" target="_blank">Source Code</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
 <div id="modal0" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('modal0')">&times;</span>
@@ -171,15 +242,7 @@
 
 
 
-      <div id="modal2" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('modal2')">&times;</span>
-          <h2>Ordinary Skincare</h2>
-          <p>Developed brand identity, packaging and visual design for a fictional skincare company promoting transparency.</p>
-          <img src="/path/to/image2.jpg" alt="Ordinary Skincare Full">
-          <div class="tags">Branding, Design, Marketing</div>
-        </div>
-      </div>
+
 
   <div id="modal3" class="modal">
     <div class="modal-content">

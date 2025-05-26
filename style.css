@@ -95,23 +95,25 @@ nav ul li a:hover {
 .project-images {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
   justify-content: center;
+  align-items: flex-start; /* Align all cards to the top */
+  gap: 2rem;
 }
 
+
 .project-card {
-  position: relative;
-  flex: 1 1 300px;
-  overflow: hidden;
-  border-radius: 12px;
-  background-color: #1f2a30;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-  max-width: 300px;
+  flex: 0 0 300px; /* Fixed width and no grow/shrink */
+  height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  background-color: #2E3944;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
 }
+
 
 .project-card img {
   width: 100%;
@@ -660,6 +662,52 @@ img.pcb-image {
   color: white;
 }
 
-.project-card:hover .project-info {
+.project-card:hover .project-info {   
   opacity: 1;
+}
+.about-container {
+  display: flex;
+  align-items: flex-start;  /* Align tops of image and text */
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: nowrap; /* Prevent wrapping unless screen is narrow */
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+}
+
+
+.about-img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.about-text h1, .about-text h2 {
+  margin: 0;
+}
+.modal-img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.project-grid {
+  display: flex;
+  flex-wrap: wrap; /* allows rows to break */
+  gap: 20px; /* or whatever spacing you prefer */
+  justify-content: center; /* center horizontally */
+  align-items: flex-start; /* align items to the top */
 }
