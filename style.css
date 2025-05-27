@@ -181,7 +181,7 @@ nav ul li a:hover {
 }
 
 .footer-links a {
-  color: #124E66;
+  color: #748d92;;
   margin: 0 6px;
   text-decoration: none;
   font-weight: 500;
@@ -489,6 +489,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+   position: relative;
 }
 
 .project-image {
