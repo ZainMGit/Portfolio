@@ -1,3 +1,3 @@
 Personal portfolio to showcase projects and resume
 
-Currently under development
+Link - https://zainmgit.github.io/Portfolio/
