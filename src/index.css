@@ -111,15 +111,18 @@ body {
   height: 100%;
   z-index: 1;
   pointer-events: none;
-  mix-blend-mode: screen;
-  opacity: 0.88;
+  mix-blend-mode: normal;
+  opacity: 0.62;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .aurora-container canvas {
   width: 100% !important;
   height: 100% !important;
   display: block;
-  filter: saturate(1.25) blur(2px);
+  filter: saturate(1.08) blur(1.2px);
 }
 
 .about,

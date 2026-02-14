@@ -32,6 +32,7 @@ const projects = [
 
 export default function App() {
   const [activeModal, setActiveModal] = useState(null);
+  const [activeHref, setActiveHref] = useState('#home');
   const imageUrl = (file) => `${import.meta.env.BASE_URL}images/${file}`;
 
   useEffect(() => {
@@ -40,6 +41,40 @@ export default function App() {
       document.body.style.overflow = 'auto';
     };
   }, [activeModal]);
+
+  useEffect(() => {
+    const sectionIds = ['home', 'about', 'skills', 'projects'];
+    const hrefBySection = {
+      home: '#home',
+      about: '#about',
+      skills: '#about',
+      projects: '#projects'
+    };
+
+    const updateActiveSection = () => {
+      const markerY = window.scrollY + window.innerHeight * 0.4;
+      let current = 'home';
+
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section && markerY >= section.offsetTop) {
+          current = id;
+        }
+      });
+
+      const nextHref = hrefBySection[current] ?? '#home';
+      setActiveHref((prev) => (prev === nextHref ? prev : nextHref));
+    };
+
+    updateActiveSection();
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    window.addEventListener('resize', updateActiveSection);
+
+    return () => {
+      window.removeEventListener('scroll', updateActiveSection);
+      window.removeEventListener('resize', updateActiveSection);
+    };
+  }, []);
 
   return (
     <>
@@ -60,7 +95,7 @@ export default function App() {
                 rel: 'noopener noreferrer'
               }
             ]}
-            activeHref="#home"
+            activeHref={activeHref}
             className="custom-nav"
             ease="power2.easeOut"
             baseColor="#0b1221"
