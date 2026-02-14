@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Aurora from './Aurora';
 import PillNav from './PillNav';
+import GlareHover from './GlareHover';
 
 const projects = [
   {
@@ -51,7 +52,7 @@ export default function App() {
             items={[
               { label: 'Home', href: '#home' },
               { label: 'About', href: '#about' },
-              { label: 'Projects', href: `${import.meta.env.BASE_URL}projects.html` },
+              { label: 'Projects', href: '#projects' },
               {
                 label: 'Resume',
                 href: 'https://docs.google.com/document/d/1OLUcIip3HopUhFJs7bz1wGKWwrrWz4WAZa19wzxIrdM/edit?usp=sharing',
@@ -62,10 +63,10 @@ export default function App() {
             activeHref="#home"
             className="custom-nav"
             ease="power2.easeOut"
-            baseColor="#0f172a"
-            pillColor="#1e293b"
-            hoveredPillTextColor="#ffffff"
-            pillTextColor="#cbd5e1"
+            baseColor="#0b1221"
+            pillColor="#122038"
+            hoveredPillTextColor="#dff6ff"
+            pillTextColor="#9cc9ff"
             theme="light"
             initialLoadAnimation={false}
           />
@@ -121,9 +122,21 @@ export default function App() {
           <h2>Featured Projects</h2>
           <div className="project-images">
             {projects.map((project) => (
-              <div
+              <GlareHover
                 key={project.id}
                 className="project-card"
+                width="100%"
+                height="100%"
+                background="rgba(16, 27, 46, 0.88)"
+                borderRadius="16px"
+                borderColor="rgba(102, 158, 255, 0.22)"
+                glareColor="#ffffff"
+                glareOpacity={0.24}
+                glareAngle={-30}
+                glareSize={260}
+                transitionDuration={780}
+                playOnce={false}
+                style={{ cursor: 'pointer' }}
                 onClick={() => setActiveModal(project.id)}
                 onKeyDown={(e) => (e.key === 'Enter' ? setActiveModal(project.id) : null)}
                 role="button"
@@ -135,7 +148,7 @@ export default function App() {
                   <p>{project.subtitle}</p>
                 </div>
                 <div className="project-link"><a href="#" onClick={(e) => e.preventDefault()}>Learn More</a></div>
-              </div>
+              </GlareHover>
             ))}
           </div>
         </section>
