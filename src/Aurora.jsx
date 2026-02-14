@@ -103,9 +103,12 @@ void main() {
   float midPoint = 0.20;
   float auroraAlpha = smoothstep(midPoint - uBlend * 0.5, midPoint + uBlend * 0.5, intensity);
 
-  vec3 auroraColor = intensity * rampColor;
+  vec3 auroraColor = clamp(intensity * rampColor, 0.0, 1.0);
+  auroraAlpha = clamp(auroraAlpha, 0.0, 0.78);
 
-  fragColor = vec4(auroraColor * auroraAlpha, auroraAlpha);
+  vec3 base = vec3(0.035, 0.075, 0.145);
+  vec3 finalColor = clamp(base + auroraColor * auroraAlpha * 0.72, 0.0, 1.0);
+  fragColor = vec4(finalColor, 1.0);
 }
 `;
 
@@ -121,15 +124,14 @@ export default function Aurora(props) {
     if (!ctn) return;
 
     const renderer = new Renderer({
-      alpha: true,
-      premultipliedAlpha: true,
-      antialias: true
+      alpha: false,
+      premultipliedAlpha: false,
+      antialias: false
     });
     const gl = renderer.gl;
-    gl.clearColor(0, 0, 0, 0);
-    gl.enable(gl.BLEND);
-    gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
-    gl.canvas.style.backgroundColor = 'transparent';
+    gl.clearColor(0.035, 0.075, 0.145, 1.0);
+    gl.disable(gl.BLEND);
+    gl.canvas.style.backgroundColor = '#09142a';
 
     let program;
 

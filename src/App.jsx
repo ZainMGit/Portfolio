@@ -32,7 +32,6 @@ const projects = [
 
 export default function App() {
   const [activeModal, setActiveModal] = useState(null);
-  const [activeHref, setActiveHref] = useState('#home');
   const imageUrl = (file) => `${import.meta.env.BASE_URL}images/${file}`;
 
   useEffect(() => {
@@ -41,40 +40,6 @@ export default function App() {
       document.body.style.overflow = 'auto';
     };
   }, [activeModal]);
-
-  useEffect(() => {
-    const sectionIds = ['home', 'about', 'skills', 'projects'];
-    const hrefBySection = {
-      home: '#home',
-      about: '#about',
-      skills: '#about',
-      projects: '#projects'
-    };
-
-    const updateActiveSection = () => {
-      const markerY = window.scrollY + window.innerHeight * 0.4;
-      let current = 'home';
-
-      sectionIds.forEach((id) => {
-        const section = document.getElementById(id);
-        if (section && markerY >= section.offsetTop) {
-          current = id;
-        }
-      });
-
-      const nextHref = hrefBySection[current] ?? '#home';
-      setActiveHref((prev) => (prev === nextHref ? prev : nextHref));
-    };
-
-    updateActiveSection();
-    window.addEventListener('scroll', updateActiveSection, { passive: true });
-    window.addEventListener('resize', updateActiveSection);
-
-    return () => {
-      window.removeEventListener('scroll', updateActiveSection);
-      window.removeEventListener('resize', updateActiveSection);
-    };
-  }, []);
 
   return (
     <>
@@ -95,7 +60,7 @@ export default function App() {
                 rel: 'noopener noreferrer'
               }
             ]}
-            activeHref={activeHref}
+            activeHref="#home"
             className="custom-nav"
             ease="power2.easeOut"
             baseColor="#0b1221"
@@ -110,10 +75,10 @@ export default function App() {
 
       <main>
         <section id="home" className="landing">
-          <Aurora colorStops={['#7cff67', '#B19EEF', '#5227FF']} blend={0.5} amplitude={1.0} speed={2.5} />
+          <Aurora colorStops={['#7cff67', '#B19EEF', '#5227FF']} blend={0.45} amplitude={0.9} speed={1.35} />
           <div className="landing-content">
             <h2>Welcome to My Portfolio</h2>
-            <p>I'm Zain Mustafa, an electrical engineering student passionate about building systems from hardware to full-stack software.</p>
+            <p>I'm Zain Mustafa, an electrical and computer engineering student passionate about building systems from hardware to full-stack software.</p>
             <div className="social-icons">
               <a href="https://github.com/ZainMGit" target="_blank" rel="noreferrer"><img src={imageUrl('github-icon.png')} alt="GitHub" /></a>
               <a href="https://www.linkedin.com/in/zain-a-mustafa/" target="_blank" rel="noreferrer"><img src={imageUrl('linkedin-icon.png')} alt="LinkedIn" /></a>
@@ -129,7 +94,7 @@ export default function App() {
               <div className="about-text">
                 <h2>I'm Zain Mustafa</h2>
                 <p>
-                  As an electrical engineering student at UC Davis, I have developed a strong basis in the theoretical and practical aspects of engineering.
+                  As an electrical and computer engineering student at UC Davis, I have developed a strong basis in the theoretical and practical aspects of engineering.
                   In my time as the electrical lead for the First Nations Launch Rocketry Team, I designed and implemented systems utilizing microcontrollers
                   to collect and store data from multiple sensors on a rocket.
                 </p>
