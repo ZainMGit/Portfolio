@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Aurora from './Aurora';
 import PillNav from './PillNav';
 import GlareHover from './GlareHover';
+import TextType from './TextType';
 
 const projects = [
   {
@@ -77,8 +78,19 @@ export default function App() {
         <section id="home" className="landing">
           <Aurora colorStops={['#7cff67', '#B19EEF', '#5227FF']} blend={0.45} amplitude={0.9} speed={1.35} />
           <div className="landing-content">
-            <h2>Welcome to My Portfolio</h2>
-            <p>I'm Zain Mustafa, an electrical and computer engineering student passionate about building systems from hardware to full-stack software.</p>
+            <TextType
+              as="h2"
+              text={['Zain Mustafa\'s Portfolio']}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor
+              cursorCharacter="_"
+              deletingSpeed={50}
+              loop={false}
+              variableSpeed={null}
+              cursorBlinkDuration={0.5}
+            />
+            <p>An electrical and computer engineering student passionate about building systems from hardware to full-stack software.</p>
             <div className="social-icons">
               <a href="https://github.com/ZainMGit" target="_blank" rel="noreferrer"><img src={imageUrl('github-icon.png')} alt="GitHub" /></a>
               <a href="https://www.linkedin.com/in/zain-a-mustafa/" target="_blank" rel="noreferrer"><img src={imageUrl('linkedin-icon.png')} alt="LinkedIn" /></a>
@@ -92,15 +104,15 @@ export default function App() {
             <div className="about-container">
               <img src={imageUrl('about-image.jpg')} alt="Zain" className="about-img" />
               <div className="about-text">
-                <h2>I'm Zain Mustafa</h2>
+                <h2>Hi I'm Zain Mustafa</h2>
                 <p>
-                  As an electrical and computer engineering student at UC Davis, I have developed a strong basis in the theoretical and practical aspects of engineering.
-                  In my time as the electrical lead for the First Nations Launch Rocketry Team, I designed and implemented systems utilizing microcontrollers
-                  to collect and store data from multiple sensors on a rocket.
+                  An electrical and computer engineering student at UC Davis with a passion for building. My work focuses on embedded systems, electronics design, and hardware-software integration.
+                  Through my role in the National Association of Rocketry club at UC Davis, I design and implement flight electronics that collect, log, and analyze in-flight data using microcontrollers, custom PCBs, and sensor networks. 
+                  From schematic design in KiCad to firmware development and testing, I enjoy turning ideas into hardware.
                 </p>
                 <p>
-                  This role honed my programming and data analysis skills. Additionally, in my role at the UC Davis School of Law, I have learned technical
-                  troubleshooting abilities, task prioritization, and effective team communication in fast-paced environments.
+                 Beyond hardware, I actively build software applications and systems through personal projects and my homelab enviormment. I work with self hosting web applications, Linux servers, and networking infrastructure which has shown me 
+                 how complete systems are deployed, monitored, and maintained in real-world environments.
                 </p>
               </div>
             </div>

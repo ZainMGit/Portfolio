@@ -94,7 +94,7 @@ body {
 }
 
 .landing-content {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -104,6 +104,10 @@ body {
   font-weight: 800;
   letter-spacing: -0.045em;
   margin: 0 0 1.1rem;
+}
+
+.landing .text-type {
+  white-space: nowrap;
 }
 
 .landing p {
@@ -509,6 +513,10 @@ body {
 
   .landing p {
     font-size: 1.05rem;
+  }
+
+  .landing .text-type {
+    white-space: normal;
   }
 
   .skills-card {

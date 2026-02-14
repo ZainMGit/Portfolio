@@ -1,0 +1,19 @@
+.text-type {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.text-type__content {
+  display: inline-block;
+}
+
+.text-type__cursor {
+  display: inline-block;
+  margin-left: 0.08em;
+  color: #9ed8ff;
+  font-weight: 700;
+}
+
+.text-type__cursor--hidden {
+  opacity: 0;
+}
