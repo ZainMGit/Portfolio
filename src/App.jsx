@@ -123,7 +123,7 @@ export default function App() {
           <div className="skills-card">
             <h2>Skills &amp; Software</h2>
             <ul className="skills-list">
-              {['Altium Designer', 'C/C++', 'KiCAD', 'Fusion360', 'MATLAB', 'NI Multisim', 'PCB Design', 'Soldering', 'RockSim & OpenRocket', 'Python', 'ServiceNow', 'MongoDB Atlas'].map((skill) => (
+              {['Altium Designer', 'C/C++', 'KiCAD', 'Fusion360', 'MATLAB', 'NI Multisim', 'PCB Design', 'Verilog/HDL', 'RockSim & OpenRocket', 'Python', 'ServiceNow', 'MongoDB Atlas'].map((skill) => (
                 <li key={skill}>{skill}</li>
               ))}
             </ul>
